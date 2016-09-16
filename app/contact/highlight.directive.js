@@ -9,18 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.subtitle = '(v1)';
+var HighlightDirective = (function () {
+    function HighlightDirective(renderer, el) {
+        renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'powderblue');
+        console.log("* Contact highlight called for " + el.nativeElement.tagName);
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n    <app-title [subtitle]=\"subtitle\"></app-title>\n    <app-contact></app-contact>\n  "
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    HighlightDirective = __decorate([
+        core_1.Directive({ selector: '[highlight], input' }), 
+        __metadata('design:paramtypes', [core_1.Renderer, core_1.ElementRef])
+    ], HighlightDirective);
+    return HighlightDirective;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.HighlightDirective = HighlightDirective;
+//# sourceMappingURL=highlight.directive.js.map

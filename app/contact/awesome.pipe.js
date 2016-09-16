@@ -9,18 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.subtitle = '(v1)';
+var AwesomePipe = (function () {
+    function AwesomePipe() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n    <app-title [subtitle]=\"subtitle\"></app-title>\n    <app-contact></app-contact>\n  "
-        }), 
+    AwesomePipe.prototype.transform = function (phrase) {
+        return phrase ? 'Awesome ' + phrase : '';
+    };
+    AwesomePipe = __decorate([
+        core_1.Pipe({ name: 'awesome' }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], AwesomePipe);
+    return AwesomePipe;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.AwesomePipe = AwesomePipe;
+//# sourceMappingURL=awesome.pipe.js.map

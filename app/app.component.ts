@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
+
 @Component({
   selector: 'my-app',
-  template: '<h1>Rizwan Final Project</h1>'
+  template: `
+    <app-title [subtitle]="subtitle"></app-title>
+    <app-contact></app-contact>
+  `
 })
-export class AppComponent { }
+export class AppComponent {
+  subtitle = '(v1)';
+}
