@@ -10,7 +10,6 @@ import { AppComponent }   from './app.component';
 //import { TitleComponent } from './title.component';
 import { NavBarComponent } from './navbar.component';
 
-
 	//   app/contact 
 //import { ContactComponent } from './contact/contact.component';
 
