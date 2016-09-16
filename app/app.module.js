@@ -11,42 +11,44 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 // angular
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var common_1 = require('@angular/common');
 var forms_1 = require('@angular/forms');
 // Custom component's
 var app_component_1 = require('./app.component');
-var title_component_1 = require('./title.component');
+//import { TitleComponent } from './title.component';
 var navbar_component_1 = require('./navbar.component');
 //   app/contact 
-var contact_component_1 = require('./contact/contact.component');
+//import { ContactComponent } from './contact/contact.component';
 // Custom Directive's
-var highlight_directive_1 = require('./highlight.directive');
+//import { HighlightDirective } from './highlight.directive';
 //  app/contact 
-var highlight_directive_2 = require('./contact/highlight.directive');
+//import { HighlightDirective as ContactHighlightDirective } from './contact/highlight.directive';
 // Custom Service's
-var user_service_1 = require('./user.service');
-var contact_service_1 = require('./contact/contact.service');
+//import { UserService } from './user.service';
+//import { ContactService } from './contact/contact.service';
 // Custom Pipe's
-var awesome_pipe_1 = require('./contact/awesome.pipe');
+//import { AwesomePipe } from './contact/awesome.pipe'; 
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [
+                common_1.CommonModule,
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
             ],
             declarations: [
                 app_component_1.AppComponent,
-                highlight_directive_1.HighlightDirective,
-                title_component_1.TitleComponent,
+                //			HighlightDirective,
+                //			TitleComponent,
                 // app/contact declarations
-                awesome_pipe_1.AwesomePipe,
-                contact_component_1.ContactComponent,
-                highlight_directive_2.HighlightDirective,
+                //			AwesomePipe,
+                //			ContactComponent,
+                //			ContactHighlightDirective,
                 navbar_component_1.NavBarComponent
             ],
-            providers: [contact_service_1.ContactService, user_service_1.UserService],
+            providers: [],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
