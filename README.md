@@ -1,5 +1,5 @@
 # AngularJsFinalProject
-* I'm going to bulid single Page Application with Two pages
+* I'm going to bulid single Page Application with AngularJs
 ---
 	1. User's
 		User's with Full CURD Opration's
