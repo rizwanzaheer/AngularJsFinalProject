@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 // Custom component's
 import { AppComponent }   from './app.component';
 import { TitleComponent } from './title.component';
+import { NavBarComponent } from './navbar.component';
 
 	//   app/contact 
 import { ContactComponent } from './contact/contact.component';
@@ -38,7 +39,8 @@ import { AwesomePipe } from './contact/awesome.pipe';
 		// app/contact declarations
 			AwesomePipe,
 			ContactComponent,
-			ContactHighlightDirective
+			ContactHighlightDirective,
+			NavBarComponent
 		],
 	providers: [ ContactService, UserService ],
 	bootstrap: [ AppComponent ]

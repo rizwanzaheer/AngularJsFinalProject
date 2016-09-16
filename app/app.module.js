@@ -15,6 +15,7 @@ var forms_1 = require('@angular/forms');
 // Custom component's
 var app_component_1 = require('./app.component');
 var title_component_1 = require('./title.component');
+var navbar_component_1 = require('./navbar.component');
 //   app/contact 
 var contact_component_1 = require('./contact/contact.component');
 // Custom Directive's
@@ -42,7 +43,8 @@ var AppModule = (function () {
                 // app/contact declarations
                 awesome_pipe_1.AwesomePipe,
                 contact_component_1.ContactComponent,
-                highlight_directive_2.HighlightDirective
+                highlight_directive_2.HighlightDirective,
+                navbar_component_1.NavBarComponent
             ],
             providers: [contact_service_1.ContactService, user_service_1.UserService],
             bootstrap: [app_component_1.AppComponent]
