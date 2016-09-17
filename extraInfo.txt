@@ -1,0 +1,8 @@
+Most likely you need to download and include the TypeScript definition file for jQuery—jquery.d.ts—in your project
+
+You can download it here(https://github.com/typings/typings), or you can use typings(https://raw.githubusercontent.com/borisyankov/DefinitelyTyped/master/jquery/jquery.d.ts):
+
+// 1. Install typings
+npm install typings -g
+// 2. Download jquery.d.ts (run this command in the root dir of your project)
+typings install dt~jquery --global --save
