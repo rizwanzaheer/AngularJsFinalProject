@@ -2,7 +2,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule }       from '@angular/common';
-import { FormsModule }        from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }        from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 // Custom component's
@@ -33,7 +33,7 @@ import { NavBarComponent } from './navbar.component';
 			BrowserModule,
 			FormsModule,
 			//RouterModule.forRoot(ContactsAppRoute)
-		],
+	],
 	declarations: [
 			AppComponent,
 //			HighlightDirective,
@@ -43,11 +43,14 @@ import { NavBarComponent } from './navbar.component';
 //			ContactComponent,
 //			ContactHighlightDirective,
 			NavBarComponent
-		],
+	],
 	providers: [ 
 			//ContactService, 
 			//UserService 
-		],
+	],
+    exports: [
+       
+    ],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule { }

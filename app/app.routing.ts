@@ -13,6 +13,7 @@ const appRoutes: Routes = [
 //   },
 //   { path: '', component: HomeComponent },
 //   { path: '**', component: PageNotFoundComponent }
+    { path: '**', redirectTo: 'not-found' }
 ];
 
 export const appRoutingProviders: any[] = [
