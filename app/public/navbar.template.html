@@ -8,13 +8,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"></a>
+      <a class="navbar-brand" [routerLink]="['']"></a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class=""><a href="#">User <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Post</a></li>
+        <li class=""><a [routerLinkActive]="['active']" [routerLink]="['/user']">User <span class="sr-only">(current)</span></a></li>
+        <li><a [routerLinkActive]="['active']" [routerLink]="['/post']">Post</a></li>
+        <li><a [routerLinkActive]="['active']" [routerLink]="['/random']">Random</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a [routerLinkActive]="['active']" [routerLink]="['/signin']"><i class="fa fa-sign-in fa-2x" aria-hidden="true"></i></a></li>
+        <li><a [routerLinkActive]="['active']" [routerLink]="['/signup']"><i class="fa fa-user-plus fa-2x" aria-hidden="true"></i></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

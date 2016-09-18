@@ -1,5 +1,5 @@
 /* Master Styles */
-h1 {
+h1, legend {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
@@ -9,6 +9,24 @@ h2, h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
+/*
 body {
- /* margin: 2em;*/
+  margin: 2em;
+}*/
+.body-content{
+	  min-height: calc(100vh - 156.5px);
+    position: relative;
+}
+.navbar{
+      box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+footer{
+  text-align: center;
+  padding: 20px;
+  background:#1d1d1b;
+  color:#ffffff;
+  font-weight: 100;
+  font-size:16px;
 }

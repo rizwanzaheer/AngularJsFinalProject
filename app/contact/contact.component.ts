@@ -1,11 +1,13 @@
 import { Component, OnInit }      from '@angular/core';
 import { Contact, ContactService } from './contact.service';
-import { UserService }    from '../user.service';
+import { UserService }    from '../user/user.service';
+
 @Component({
   selector: 'app-contact',
   templateUrl: 'app/contact/contact.component.html',
   styleUrls: ['app/contact/contact.component.css']
 })
+
 export class ContactComponent implements OnInit {
   contact:  Contact;
   contacts: Contact[];
