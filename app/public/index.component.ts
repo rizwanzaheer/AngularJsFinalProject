@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user/user.service';
 
 @Component({
@@ -6,9 +6,13 @@ import { UserService } from '../user/user.service';
     templateUrl: 'app/public/index.component.html'
 })
 
-export class IndexComponent{
+export class IndexComponent implements OnInit {
     userName;
-    constructor(_userService: UserService){
+    constructor(_userService: UserService) {
         this.userName = _userService.userName;
+    }
+
+    ngOnInit() {
+
     }
 }

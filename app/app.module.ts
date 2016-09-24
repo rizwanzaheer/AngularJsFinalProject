@@ -12,12 +12,16 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './public/index.component';
 import { NavBarComponent } from './public/navbar.component';
 import { FooterComponent } from './public/footer.component';
+import { SignUpComponent } from './contact/signup.component';
+import { SignInComponent } from './contact/signin.component';
 import { NotFoundComponent } from './public/not-found.component';
 import { UserComponent } from './user/user.component';
 import { PostComponent } from './post/post.component';
-import { SignUpComponent } from './contact/signup.component';
-import { SignInComponent } from './contact/signin.component';
 //import { ContactComponent } from './contact/contact.component';
+
+// Custum module's
+import { ContactModule } from './contact/contact.module';
+
 
 // Custom Directive's
 //import { HighlightDirective } from './highlight.directive';
@@ -34,37 +38,38 @@ import { routing } from './app.routing';
 
 @NgModule({
 	imports: [
-			CommonModule,
-			BrowserModule,
-			FormsModule,
-			routing,
-			//MdButtonModule,
-			//MdCardModule
-			//RouterModule.forRoot(ContactsAppRoute)
+		CommonModule,
+		BrowserModule,
+		FormsModule,
+		routing,
+		ReactiveFormsModule,
+		//MdButtonModule,
+		//MdCardModule
+		//RouterModule.forRoot(ContactsAppRoute)
 	],
 	declarations: [
-			AppComponent,
-			NavBarComponent,
-			IndexComponent,
-			UserComponent,
-			PostComponent,
-			SignUpComponent,
-			SignInComponent,
-//			HighlightDirective,
-//			TitleComponent,
-//			AwesomePipe,
-//			ContactComponent,
-//			ContactHighlightDirective,
-			FooterComponent,
-			NotFoundComponent
+		AppComponent,
+		NavBarComponent,
+		IndexComponent,
+		UserComponent,
+		PostComponent,
+		SignUpComponent,
+		SignInComponent,
+		//HighlightDirective,
+		//TitleComponent,
+		//AwesomePipe,
+		//ContactComponent,
+		//ContactHighlightDirective,
+		FooterComponent,
+		NotFoundComponent
 	],
-	providers: [ 
-			//ContactService, 
-			UserService 
+	providers: [
+		//ContactService, 
+		UserService
 	],
-    exports: [
-       
-    ],
-	bootstrap: [ AppComponent ]
+	exports: [
+
+	],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
