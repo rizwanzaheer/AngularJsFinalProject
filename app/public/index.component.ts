@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user/user.service';
+import { UserService } from '../users/user.service';
 
 @Component({
     //selector: 'router-outlet',
@@ -7,9 +7,9 @@ import { UserService } from '../user/user.service';
 })
 
 export class IndexComponent implements OnInit {
-    userName;
+    userName = "Rizwan";
     constructor(_userService: UserService) {
-        this.userName = _userService.userName;
+        //this.userName = _userService.userName;
     }
 
     ngOnInit() {

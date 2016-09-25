@@ -1,13 +1,14 @@
 <div class="container">
     <div class="well col-md-6 col-md-offset-2">
         <!--Template driven form -->
-        <form #f="ngForm" class="form-horizontal" (ngSubmit)="onSubmit(f.value)" >
+        <form #f="ngForm" class="form-horizontal" (ngSubmit)="onSubmit(f.value)">
             <fieldset ngModelGroup="signin" #signin="ngModelGroup">
                 <legend>Sign In</legend>
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-3 control-label">Email</label>
                     <div class="col-lg-9">
-                        <input name="email" #email="ngModel" type="email" [(ngModel)]="test.title" class="form-control" id="inputEmail" placeholder="Email" required>
+                        <input name="email" #email="ngModel" type="email" [(ngModel)]="test.title" class="form-control" id="inputEmail" placeholder="Email"
+                            required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -16,7 +17,8 @@
                 <div class="form-group">
                     <label for="password" class="col-lg-3 control-label">Password</label>
                     <div class="col-lg-9">
-                        <input type="password" pattern="/^[A-Z]{1}[a-z]{6}[@][0-9]{3}*$/" name="password" #password="ngModel" [(ngModel)]="test.id" class="form-control" id="password" placeholder="Password" required>
+                        <input type="password" name="password" #password="ngModel" [(ngModel)]="test.id" class="form-control" id="password" placeholder="Password"
+                            required>
                     </div>
                 </div>
                 <br>

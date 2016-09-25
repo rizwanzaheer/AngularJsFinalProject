@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { UserService } from './user/user.service';
+import { UserService } from './users/user.service';
 
 @Component({
 	selector: 'app-title',
@@ -11,6 +11,6 @@ export class TitleComponent {
 	user = '';
 
 	constructor(userService: UserService) {
-	  this.user = userService.userName;
+	  //this.user = userService.userName;
 	}
 }

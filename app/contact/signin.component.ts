@@ -9,11 +9,7 @@ import { Test } from './test';
 
 export class SignInComponent implements OnInit {
     test = new Test();
-    //form: FormGroup;
-    constructor(//fb: FormBuilder
-    ) {
-
-    }
+    constructor() { }
 
     ngOnInit() {
 

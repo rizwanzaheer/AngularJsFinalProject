@@ -30,3 +30,11 @@ footer{
   font-weight: 100;
   font-size:16px;
 }
+
+.clickable {
+    cursor: pointer;
+}
+
+.thumbnail {
+    border-radius: 100%;
+}
