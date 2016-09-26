@@ -1,5 +1,5 @@
-<h1>{{ title }}</h1>
-<div class="row">
+<div class="container">
+    <h1>{{ title }}</h1>
     <div class="col-md-6 well">
         <form [formGroup]="form" (ngSubmit)="save()">
             <fieldset>
@@ -27,22 +27,22 @@
             </fieldset>
             <fieldset formGroupName="address">
                 <legend>Address</legend>
-                    <div class="form-group">
-                        <label>Street</label>
-                        <input [(ngModel)]="user.address.street" formControlName="street" type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Suite</label>
-                        <input [(ngModel)]="user.address.suite" formControlName="suite" type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>City</label>
-                        <input [(ngModel)]="user.address.city" formControlName="city" type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>ZipCode</label>
-                        <input [(ngModel)]="user.address.zipcode" formControlName="zipcode" type="text" class="form-control">
-                    </div>
+                <div class="form-group">
+                    <label>Street</label>
+                    <input [(ngModel)]="user.address.street" formControlName="street" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Suite</label>
+                    <input [(ngModel)]="user.address.suite" formControlName="suite" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>City</label>
+                    <input [(ngModel)]="user.address.city" formControlName="city" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>ZipCode</label>
+                    <input [(ngModel)]="user.address.zipcode" formControlName="zipcode" type="text" class="form-control">
+                </div>
             </fieldset>
             <button [disabled]="!form.valid" type="submit" class="btn btn-primary">
                 Save

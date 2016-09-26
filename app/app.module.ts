@@ -1,12 +1,7 @@
 // angular
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { HttpModule } from '@angular/http';
-//import { MdButtonModule } from '@angular2-material/button';
-//import { MdCardModule } from '@angular2-material/card';
 
 // Custom component's
 import { AppComponent } from './app.component';
@@ -16,42 +11,40 @@ import { FooterComponent } from './public/footer.component';
 import { SignUpComponent } from './contact/signup.component';
 import { SignInComponent } from './contact/signin.component';
 import { NotFoundComponent } from './public/not-found.component';
-import { UsersComponent } from './users/users.component';
-import { PostComponent } from './post/post.component';
 
-import { ContactModule } from './contact/contact.module';
-
-import { UserService } from './users/user.service';
+import { SharedModule }      from './public/shared.module';
+import { UsersModule }       from './users/users.module';
+import { PostsModule }       from './posts/posts.module';
 
 import { usersRouting } from './users/users.routing';
+import { postsRouting } from './posts/posts.routing';
 import { routing } from './app.routing';
 
 @NgModule({
 	imports: [
-		CommonModule,
 		BrowserModule,
+		SharedModule,
+		UsersModule,
+		PostsModule,
 		FormsModule,
-		routing,
 		ReactiveFormsModule,
-		HttpModule
-		//MdButtonModule,
-		//MdCardModule
-		//RouterModule.forRoot(ContactsAppRoute)
+		usersRouting,
+		postsRouting,
+		routing,
+
 	],
 	declarations: [
 		AppComponent,
 		NavBarComponent,
 		IndexComponent,
-		UsersComponent,
-		PostComponent,
+		//UsersComponent,
+		//PostsComponent,
 		SignUpComponent,
 		SignInComponent,
 		FooterComponent,
 		NotFoundComponent
 	],
 	providers: [
-		//ContactService, 
-		UserService
 	],
 	exports: [
 

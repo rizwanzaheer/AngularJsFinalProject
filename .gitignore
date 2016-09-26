@@ -2,6 +2,7 @@ node_modules/
 typings/
 app/**/*.js
 app/**/*.js.map
+npm*.*
 npm-debug.*.*
 app/npm-debug.log
 app/**/npm-debug.log

@@ -9,9 +9,9 @@ import { HttpModule }          from '@angular/http';
 import { User }                from './user';
 import { UserFormComponent }   from './user-form.component';
 import { UsersComponent }      from './users.component';
+
 import { UserService }         from './user.service';
 import { PreventUnsavedChangesGuard } from '../prevent-unsaved-changes-guard.service';
-
 
 @NgModule({
     imports: [
@@ -22,17 +22,18 @@ import { PreventUnsavedChangesGuard } from '../prevent-unsaved-changes-guard.ser
         HttpModule
     ],
     declarations: [
-        UserFormComponent, 
-        UsersComponent
+        UsersComponent,
+        UserFormComponent
     ],
-    exports: [
-        UserFormComponent, 
-        UsersComponent
+    exports: [ 
+        UsersComponent,
+        UserFormComponent
     ],
     providers: [
         UserService,
         PreventUnsavedChangesGuard
     ]
 })
+
 export class UsersModule { 
 }
