@@ -8,16 +8,16 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './public/index.component';
 import { NavBarComponent } from './public/navbar.component';
 import { FooterComponent } from './public/footer.component';
-import { SignUpComponent } from './contact/signup.component';
-import { SignInComponent } from './contact/signin.component';
 import { NotFoundComponent } from './public/not-found.component';
 
 import { SharedModule }      from './public/shared.module';
 import { UsersModule }       from './users/users.module';
 import { PostsModule }       from './posts/posts.module';
+import { AuthModule } from './auth/auth.module';
 
 import { usersRouting } from './users/users.routing';
 import { postsRouting } from './posts/posts.routing';
+import { authRouting } from './auth/auth.routing';
 import { routing } from './app.routing';
 
 @NgModule({
@@ -28,8 +28,10 @@ import { routing } from './app.routing';
 		PostsModule,
 		FormsModule,
 		ReactiveFormsModule,
+		AuthModule,
 		usersRouting,
 		postsRouting,
+		authRouting,
 		routing,
 
 	],
@@ -37,10 +39,6 @@ import { routing } from './app.routing';
 		AppComponent,
 		NavBarComponent,
 		IndexComponent,
-		//UsersComponent,
-		//PostsComponent,
-		SignUpComponent,
-		SignInComponent,
 		FooterComponent,
 		NotFoundComponent
 	],

@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-    templateUrl: 'app/contact/signup.component.html'
+    templateUrl: 'app/auth/signup.component.html'
 })
 
 export class SignUpComponent implements OnInit {

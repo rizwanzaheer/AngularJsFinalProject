@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 //import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Test } from './test';
+import { Test } from '../contact/test';
 
 @Component({
-    templateUrl: 'app/contact/signin.component.html'
+    templateUrl: 'app/auth/signin.component.html'
 })
 
 export class SignInComponent implements OnInit {
