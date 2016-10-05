@@ -1,6 +1,6 @@
 {
   "name": "angularfinalproject",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server",
@@ -21,7 +21,7 @@
     "@angular/router": "~3.0.1",
     "@angular/upgrade": "~2.0.1",
   
-    "angular2-in-memory-web-api": "^0.0.20",
+    "angular-in-memory-web-api": "~0.1.1",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "reflect-metadata": "^0.1.8",

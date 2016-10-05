@@ -10,9 +10,7 @@ export class SignUpComponent implements OnInit {
     registerForm: FormGroup;
     countries = ["Pakistan", "UK", "USA", "UAE", "KSA", "Australia", "Ireland", "Brazil", "China", "Indonesia"];
 
-    constructor(private _formbuilder: FormBuilder) {
-
-    }
+    constructor(private _formbuilder: FormBuilder) { }
 
     ngOnInit() {
         this.registerForm = this._formbuilder.group({
@@ -24,10 +22,10 @@ export class SignUpComponent implements OnInit {
                 confirmpassword: ['', Validators.required],
             }),
             address: this._formbuilder.group({
-                street: ['',Validators.minLength(3)],
+                street: ['', Validators.minLength(3)],
                 zip: ['', Validators.pattern('[0-9]{5}')],
-                city: ['',Validators.minLength(3)],
-                country: ['',Validators.minLength(3)]
+                city: ['', Validators.minLength(3)],
+                country: ['', Validators.minLength(3)]
             })
         });
 
