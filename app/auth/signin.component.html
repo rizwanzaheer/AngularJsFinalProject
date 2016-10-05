@@ -7,26 +7,50 @@
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-3 control-label">Email</label>
                     <div class="col-lg-9">
-                        <input name="email" #email="ngModel" type="email" [(ngModel)]="test.title" class="form-control" id="inputEmail" placeholder="Email"
-                            required>
+                        <input name="email" type="email" [(ngModel)]="test.title" class="form-control" minlength="4" maxlength="8"
+                            id="inputEmail" #email="ngModel" placeholder="Email" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <p>Email is {{ test | json}}</p>
+                    <!--<div *ngIf="formErrors.email" class="alert alert-danger">
+                        {{ formErrors.email }}
+                    </div>-->
+                    <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+                        <div [hidden]="!email.errors.required">
+                            email is required
+                        </div>
+                        <div [hidden]="!email.errors.minlength">
+                            email must be at least 4 characters long.
+                        </div>
+                        <div [hidden]="!email.errors.maxlength">
+                            email cannot be more than 8 characters long.
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="password" class="col-lg-3 control-label">Password</label>
                     <div class="col-lg-9">
-                        <input type="password" name="password" #password="ngModel" [(ngModel)]="test.id" class="form-control" id="password" placeholder="Password"
-                            required>
+                        <input type="password" name="password" #password="ngModel" [(ngModel)]="test.id" minlength="4" class="form-control" id="password"
+                            placeholder="Password" required>
                     </div>
+                </div>
+                <div class="form-group">
+                    <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger">
+                        <div [hidden]="!password.errors.required">
+                            password is required
+                        </div>
+                        <div [hidden]="!password.errors.minlength">
+                            password must be at least 4 characters long.
+                        </div>
+                    </div>
+                    <p>Email is {{ test | json}}</p>
                 </div>
                 <br>
                 <br>
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                         <button type="reset" class="btn btn-default">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" [disabled]="!f.valid" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
             </fieldset>

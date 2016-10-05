@@ -12,7 +12,6 @@ export class SignInComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
-
     }
 
     onSubmit(value) {

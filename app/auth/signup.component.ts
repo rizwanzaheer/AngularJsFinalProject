@@ -8,6 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 export class SignUpComponent implements OnInit {
     registerForm: FormGroup;
+    countries = ["Pakistan", "UK", "USA", "UAE", "KSA", "Australia", "Ireland", "Brazil", "China", "Indonesia"];
 
     constructor(private _formbuilder: FormBuilder) {
 
@@ -23,10 +24,10 @@ export class SignUpComponent implements OnInit {
                 confirmpassword: ['', Validators.required],
             }),
             address: this._formbuilder.group({
-                street: [],
-                zip: [],
-                city: [],
-                country: []
+                street: ['',Validators.minLength(3)],
+                zip: ['', Validators.pattern('[0-9]{5}')],
+                city: ['',Validators.minLength(3)],
+                country: ['',Validators.minLength(3)]
             })
         });
 

@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 
 import { SignInComponent } from './signin.component';
 import { SignUpComponent } from './signup.component';
+import { EqualValidator } from './equal-validator.directive';
+import { EmailValidator } from './email.validator';
 
 @NgModule({
     imports: [
@@ -17,7 +19,9 @@ import { SignUpComponent } from './signup.component';
     ],
     declarations: [
         SignInComponent,
-        SignUpComponent
+        SignUpComponent,
+        EqualValidator,
+        EmailValidator
     ],
     exports: [
 
