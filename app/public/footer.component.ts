@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'footer',
-  template: '© Copyrights 2016'
+  template: 'Copyright © 2016 <br> Developed by <a target="_blank" href="http://github.com/rizwanzaheer/" >Rizwan </a>'
 })
 export class FooterComponent { }
